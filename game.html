@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Cadenas Moyen Âge</title>
+        
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="scripts/jquery.rwdImageMaps.js"></script>
+        <script src="scripts/script.js"></script>
+
+    </head>
+    <body>
+        <img src="resources/cadenas/cad_0.png" usemap="#image-map" onclick="onImageClicked();">
+
+        <map name="image-map">
+            <area onclick="onInput('1');" alt="1" title="1" href="#" coords="306,738,513,738,546,774,548,997,517,1032,305,1033,271,1001,270,772" shape="poly">
+            <area onclick="onInput('2');" alt="2" title="2" href="#" coords="662,741,866,740,904,778,904,1001,872,1037,658,1037,626,1004,626,775" shape="poly">
+            <area onclick="onInput('3');" alt="3" title="3" href="#" coords="1004,738,1207,738,1242,770,1245,997,1212,1035,997,1032,965,1001,964,776" shape="poly">
+
+            <area onclick="onInput('4');" alt="4" title="4" href="#" coords="306,1086,511,1085,548,1124,547,1351,519,1381,305,1382,270,1352,270,1123" shape="poly">
+            <area onclick="onInput('5');" alt="5" title="5" href="#" coords="662,1093,869,1090,904,1127,903,1351,872,1386,659,1388,624,1355,624,1124" shape="poly">
+            <area onclick="onInput('6');" alt="6" title="6" href="#" coords="1012,1093,1221,1091,1254,1127,1257,1355,1221,1389,1010,1388,979,1355,977,1124" shape="poly">
+
+            <area onclick="onInput('7');" alt="7" title="7" href="#" coords="304,1436,511,1436,547,1473,548,1701,512,1734,305,1735,270,1705,268,1471" shape="poly">
+            <area onclick="onInput('8');" alt="8" title="8" href="#" coords="659,1448,866,1448,899,1481,903,1711,868,1742,658,1743,623,1714,624,1485" shape="poly">
+            <area onclick="onInput('9');" alt="9" title="9" href="#" coords="1007,1450,1215,1451,1250,1485,1250,1711,1215,1747,1002,1745,973,1715,974,1481" shape="poly">
+
+            <area onclick="onInput('0');" alt="0" title="0" href="#" coords="663,1784,870,1780,907,1818,907,2048,869,2079,666,2080,628,2045,628,1816" shape="poly">
+            <area onclick="onInput('c');" alt="c" title="c" href="#" coords="1118,1931,93" shape="circle">
+        </map>
+
+        <script>
+            $(document).ready(function(e) {
+                $('img[usemap]').rwdImageMaps();
+            });
+        </script>
+    </body>
+</html>
