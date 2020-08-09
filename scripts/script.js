@@ -1,7 +1,7 @@
-var codes = [
-  123, //Code pour Indice numéro 1
-  001, //Code pour Indice numéro 2
-  789, //Code pour Indice numéro 3
+const codes = [
+  "dc5c7986daef50c1e02ab09b442ee34f", //Hash of code "001" (<- Please, Don't right this), give access to clue_01
+  "93dd4de5cddba2c733c65f233097f05a", //Hash of code "002" (<- Please, Don't right this), give access to clue_02
+  "e88a49bccde359f0cabb40db83ba6080"  //Hash of code "003" (<- Please, Don't right this), give access to clue_03
 ];
 
 function foo(){
@@ -13,12 +13,12 @@ var input = "";
 var clueIndex = -1;
 
 function isCorrect(listcodes, input){
-    for(var i = 0; i < codes.length; i++){
-        if(input == listcodes[i]){
-            return i;
-        }
-    }
-    return -1;
+  for(var i = 0; i < codes.length; i++){
+      if(hex_md5(input) == listcodes[i]){
+          return i;
+      }
+  }
+  return -1;
 }
 
 function changeDisplay(usemap){
@@ -52,7 +52,7 @@ function onInput(touch) {
       img.setAttribute("src", "resources/cadenas/cad_"+input.length+".png");
 
       if(input.length >= 3){
-        clueIndex = isCorrect( codes, parseInt(input) );
+        clueIndex = isCorrect( codes, input );
         if(clueIndex == -1){
           img.setAttribute("src", "resources/cadenas/cad_faux.png");
           input = "";
